@@ -1,32 +1,32 @@
 Commands:
 
 Make addon:
-ee make:addon emoji_reactions --description='Allow users to react to channel entries with emojis' --version='1.0.0' --author='Matt Johnson' --author-url='basicblog.test'
+php eecli.php make:addon emoji_reactions --description='Allow users to react to channel entries with emojis' --version='1.0.0' --author='Matt Johnson' --author-url='basicblog.test'
 
 Fix lang
 Fix icon
 
 Make Emoji Model and EmojiReaction:
-ee make:model Emoji --addon=emoji_reactions
-ee make:model EmojiReaction --addon=emoji_reactions
+php eecli.php make:model Emoji --addon=emoji_reactions
+php eecli.php make:model EmojiReaction --addon=emoji_reactions
 
 Make both model migrations:
-ee make:migration --name='Create emoji table' --create --location=emoji_reactions --table=emoji
-ee make:migration --name='Create Emoji Reaction table' --create --location=emoji_reactions --table=emoji_reaction
+php eecli.php make:migration --name='Create emoji table' --create --location=emoji_reactions --table=emoji
+php eecli.php make:migration --name='Create Emoji Reaction table' --create --location=emoji_reactions --table=emoji_reaction
 
 Make two template tags:
-ee make:template-tag --addon=emoji_reactions
+php eecli.php make:template-tag --addon=emoji_reactions
     ReactButton
     ListReactions
 
 Make Action:
-ee make:action RecordReaction --addon=emoji_reactions
+php eecli.php make:action RecordReaction --addon=emoji_reactions
 
 Make a Control Panel Route
-ee make:cp-route
+php eecli.php make:cp-route
 
 Make a widget
-ee make:widget
+php eecli.php make:widget
 
 Make a prolet
-ee make:prolet
+php eecli.php make:prolet
